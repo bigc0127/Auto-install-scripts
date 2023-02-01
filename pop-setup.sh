@@ -12,9 +12,6 @@ sudo apt install vim curl ruby fish p7zip-full exa gnome-tweaks-y
 flatpak install chat.schildi.desktop com.atlauncher.ATLauncher com.microsoft.Edge com.microsoft.Teams org.gnome.Boxes org.onlyoffice.desktopeditors org.telegram.desktop -y
 flatpak update -y
 
-#Change Shell
-chsh /usr/bin/fish
-
 #Downloading por
 curl -o por https://raw.githubusercontent.com/bigc0127/por/main/por
 curl -o help.txt https://raw.githubusercontent.com/bigc0127/por/main/help.txt
@@ -34,7 +31,9 @@ echo 'export PATH="$HOME/.utils:$PATH"' >> ~/.bashrc
 sudo apt install ./fastfetch*.deb -y
 mkdir ~/.config/fish/
 mv -v ./config.fish ~/.config/fish/
-chsh /usr/bin/fish
+
+#Change Shell
+chsh -s /usr/bin/fish
 
 #Installing Brave Browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg

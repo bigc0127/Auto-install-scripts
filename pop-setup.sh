@@ -6,10 +6,10 @@ sudo apt upgrade -y
 flatpak update -y
 
 #Install debs
-sudo apt install vim curl ruby fish p7zip-full exa gnome-tweaks-y
+sudo apt install neovim curl ruby fish p7zip-full exa gnome-tweaks bibletime cmake steam -y
 
 #Install flatpaks
-flatpak install chat.schildi.desktop com.atlauncher.ATLauncher com.microsoft.Edge com.microsoft.Teams org.gnome.Boxes org.onlyoffice.desktopeditors org.telegram.desktop -y
+flatpak install chat.schildi.desktop org.pipewire.Helvum com.atlauncher.ATLauncher com.microsoft.Edge com.microsoft.Teams org.gnome.Boxes org.onlyoffice.desktopeditors org.telegram.desktop com.bitwarden.desktop com.discordapp.Discord com.google.AndroidStudio com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.InputOverlay com.obsproject.Studio.Plugin.MoveTransition com.obsproject.Studio.Plugin.NVFBC com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.SceneSwitcher com.obsproject.Studio.Plugin.TransitionTable com.obsproject.Studio.Plugin.WebSocket com.obsproject.Studio.Plugin.waveform com.spotify.Client com.synology.SynologyDrive in.srev.guiscrcpy io.github.mimbrero.WhatsAppDesktop io.github.prateekmedia.appimagepool net.davidotek.pupgui2 net.openra.OpenRA org.ardour.Ardour org.jitsi.jitsi-meet org.raspberrypi.rpi-imager org.signal.Signal us.zoom.Zoom org.videolan.VLC -y
 flatpak update -y
 
 #Downloading por
@@ -77,6 +77,16 @@ gnome-tweaks
 
 #Remove bullshit
 sudo apt purge libreoffice* firefox* -y
+
+#Install ROC Control Center
+cd ~/
+git clone https://gitlab.com/asus-linux/asusctl.git
+cd ./asusctl
+sudo apt install cmake libclang-dev libudev-dev libgtk-3-dev libclang-dev libglib2.0-dev libatkmm-1.6-dev libpangomm-1.4-dev librust-gdk-pixbuf-dev
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+make
+sudo make install
 
 
 #The End

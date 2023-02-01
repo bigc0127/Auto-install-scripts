@@ -36,7 +36,7 @@ chmod 755 ~/.utils/config.txt
 echo 'export PATH="$HOME/.utils:$PATH"' >> ~/.bashrc
 
 #Setting up fish
-curl -o fastfetch.deb https://github.com/LinusDierheimer/fastfetch/releases/download/1.9.1/fastfetch-1.9.1-Linux.deb
+curl -o fastfetch.deb https://github.com/bigc0127/Auto-install-scripts/raw/main/fastfetch-1.9.1-Linux.deb
 sudo apt install ./fastfetch.deb -y
 mv -v ./config.fish ~/.config/fish/
 

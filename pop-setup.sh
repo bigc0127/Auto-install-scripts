@@ -5,11 +5,6 @@ sudo apt update
 sudo apt upgrade -y
 flatpak update -y
 
-#DNS Settings
-echo "adding DNS"
-echo "DNS=76.76.2.22#1s30mlh7mai.dns.controld.com" >> /etc/systemd/resolved.conf
-echo "DNSOverTLS=yes" >> /etc/systemd/resolved.conf
-
 #Install debs
 sudo apt install vim curl ruby fish p7zip-full exa gnome-tweaks-y
 

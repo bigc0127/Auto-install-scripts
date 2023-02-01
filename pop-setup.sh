@@ -34,6 +34,7 @@ echo 'export PATH="$HOME/.utils:$PATH"' >> ~/.bashrc
 sudo apt install ./fastfetch*.deb -y
 mkdir ~/.config/fish/
 mv -v ./config.fish ~/.config/fish/
+chsh /usr/bin/fish
 
 #Installing Brave Browser
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg

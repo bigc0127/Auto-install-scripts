@@ -11,7 +11,7 @@ echo "DNS=76.76.2.22#1s30mlh7mai.dns.controld.com" >> /etc/systemd/resolved.conf
 echo "DNSOverTLS=yes" >> /etc/systemd/resolved.conf
 
 #Install debs
-sudo apt install vim curl ruby fish -y
+sudo apt install vim curl ruby fish p7zip-full -y
 
 #Install flatpaks
 flatpak install chat.schildi.desktop com.atlauncher.ATLauncher com.microsoft.Edge com.microsoft.Teams org.gnome.Boxes org.onlyoffice.desktopeditors org.telegram.desktop -y
@@ -36,7 +36,6 @@ chmod 755 ~/.utils/config.txt
 echo 'export PATH="$HOME/.utils:$PATH"' >> ~/.bashrc
 
 #Setting up fish
-curl -o fastfetch.deb https://github.com/bigc0127/Auto-install-scripts/raw/main/fastfetch-1.9.1-Linux.deb
 sudo apt install ./fastfetch.deb -y
 mv -v ./config.fish ~/.config/fish/
 
@@ -66,6 +65,13 @@ mv -v ./Other ./Wallpapers/
 mv -v ./Tech ./Wallpapers/
 mv -v ./76walls ./Wallpapers/
 mv -v ./Wallpapers ~/Pictures/
+
+#Themes and Icons
+mv -v ./looks.7z ~/
+mv -v ./gtk-4.0/* ~/.config/gtk-4.0/
+cd ~/
+7z x ./looks.7z -y
+
 
 #The End
 echo "all done, Welcome home"

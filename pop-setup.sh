@@ -81,10 +81,11 @@ sudo apt purge libreoffice* firefox* -y
 #Install ROC Control Center
 cd ~/
 git clone https://gitlab.com/asus-linux/asusctl.git
-cd ./asusctl
-sudo apt install cmake libclang-dev libudev-dev libgtk-3-dev libclang-dev libglib2.0-dev libatkmm-1.6-dev libpangomm-1.4-dev librust-gdk-pixbuf-dev
+cd ~/asusctl
+sudo apt install cmake libclang-dev libudev-dev libgtk-3-dev libclang-dev libglib2.0-dev libatkmm-1.6-dev libpangomm-1.4-dev librust-gdk-pixbuf-dev -y
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
+source ~/.bashrc
 make
 sudo make install
 

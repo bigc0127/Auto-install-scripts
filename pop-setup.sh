@@ -61,6 +61,11 @@ mv -v ./Other ./Wallpapers/
 mv -v ./Tech ./Wallpapers/
 mv -v ./76walls ./Wallpapers/
 mv -v ./Wallpapers ~/Pictures/
+mkdir ./ben-walls 
+mv -v ./All-of-My-Wallpapers.7z ./ben-walls
+cd ./ben-walls
+7z x ./All-of-My-Wallpapers.7z
+rm -rfv ./All-of-My-Wallpapers.7z
 
 #Themes and Icons
 mv -v ./looks.7z ~/

@@ -9,7 +9,7 @@ flatpak update -y
 sudo apt install neovim curl ruby fish p7zip-full exa gnome-tweaks bibletime cmake steam -y
 
 #Install flatpaks
-flatpak install chat.schildi.desktop org.pipewire.Helvum com.atlauncher.ATLauncher com.microsoft.Edge com.microsoft.Teams org.gnome.Boxes org.onlyoffice.desktopeditors org.telegram.desktop com.bitwarden.desktop com.discordapp.Discord com.google.AndroidStudio com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.InputOverlay com.obsproject.Studio.Plugin.MoveTransition com.obsproject.Studio.Plugin.NVFBC com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.SceneSwitcher com.obsproject.Studio.Plugin.TransitionTable com.obsproject.Studio.Plugin.WebSocket com.obsproject.Studio.Plugin.waveform com.spotify.Client com.synology.SynologyDrive in.srev.guiscrcpy io.github.mimbrero.WhatsAppDesktop io.github.prateekmedia.appimagepool net.davidotek.pupgui2 net.openra.OpenRA org.ardour.Ardour org.jitsi.jitsi-meet org.raspberrypi.rpi-imager org.signal.Signal us.zoom.Zoom org.videolan.VLC -y
+flatpak install chat.schildi.desktop org.pipewire.Helvum com.atlauncher.ATLauncher com.microsoft.Edge org.gnome.Boxes org.onlyoffice.desktopeditors org.telegram.desktop com.bitwarden.desktop com.discordapp.Discord com.google.AndroidStudio com.heroicgameslauncher.hgl com.obsproject.Studio com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.InputOverlay com.obsproject.Studio.Plugin.MoveTransition com.obsproject.Studio.Plugin.NVFBC com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.SceneSwitcher com.obsproject.Studio.Plugin.TransitionTable com.obsproject.Studio.Plugin.WebSocket com.obsproject.Studio.Plugin.waveform com.spotify.Client com.synology.SynologyDrive in.srev.guiscrcpy io.github.mimbrero.WhatsAppDesktop io.github.prateekmedia.appimagepool net.davidotek.pupgui2 net.openra.OpenRA org.ardour.Ardour org.jitsi.jitsi-meet org.raspberrypi.rpi-imager org.signal.Signal us.zoom.Zoom org.videolan.VLC -y
 flatpak update -y
 
 #Downloading por
@@ -45,10 +45,6 @@ sudo apt install brave-browser -y
 curl -o teamviewer.deb https://cloud.needlingworldwide.com/s/ZzDjbQQHz7Yecgb/download/teamviewer_15.38.3_amd64.deb
 sudo apt install ./teamviewer.deb -y
 
-#Installing Vivaldi
-curl -o vivaldi.deb https://downloads.vivaldi.com/stable/vivaldi-stable_5.6.2867.62-1_amd64.deb
-sudo apt install ./vivaldi.deb -y
-
 #Wallpapers
 mv -v ./P1/* ./Purple/
 mv -v ./P2/* ./Purple/
@@ -83,19 +79,7 @@ gnome-tweaks
 #Remove bullshit
 sudo apt purge libreoffice* firefox* -y
 
-#Install ROC Control Center
-cd ~/
-git clone https://gitlab.com/asus-linux/asusctl.git
-cd ~/asusctl
-sudo apt install cmake libclang-dev libudev-dev libgtk-3-dev libclang-dev libglib2.0-dev libatkmm-1.6-dev libpangomm-1.4-dev librust-gdk-pixbuf-dev -y
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source "$HOME/.cargo/env"
-source ~/.bashrc
-make
-sudo make install
-
 
 #The End
 echo "all done, Welcome home"
 echo "recommend reboot now for full effect"
-
